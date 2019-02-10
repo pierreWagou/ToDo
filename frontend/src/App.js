@@ -99,7 +99,7 @@ class App extends Component {
     this.toggle()
     if(item.id) {
       axios
-        .put("http://localhost:8000/api/todos/$(item.id)/", item)
+        .put("http://localhost:8000/api/todos/" + item.id + "/", item)
         .then(res => this.refreshList())
       return
     }
@@ -110,7 +110,7 @@ class App extends Component {
 
   handleDelete = item => {
     axios
-      .delete("http://localhost:8000/api/todos/$(item.id)")
+      .delete("http://localhost:8000/api/todos/" + item.id, item)
       .then(res => this.refreshList())
   }
 
