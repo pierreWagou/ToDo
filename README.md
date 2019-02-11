@@ -6,10 +6,12 @@ At project root, run :
 
 ```cpp=
 cd frontend
+npm install
 npm start
 ```
 ```cpp=
 cd frontend
+yarn install
 yarn start
 ```
 
